@@ -6,7 +6,7 @@ const RegisterForm = props => {
     const initialState = {
         fname: '',
         lname: '',
-        phone: '',
+        email: '',
         city: '',
         state: '',
         zipcode: '',
@@ -31,7 +31,10 @@ const RegisterForm = props => {
         const newUser = {
             fname: user.fname,
             lname: user.lname,
-            phone: user.phone,
+            email: user.email,
+            city: user.city,
+            state: user.state,
+            zipcode: user.zipcode,
             password: user.password,
             terms: user.terms
         };
@@ -40,8 +43,8 @@ const RegisterForm = props => {
 
 
     return (
-        <div className='register-form'>
-            <h3 className='createAcct'>Create new account</h3>
+        <div className='registerForm'>
+            <h3 className='formHeading'>Create new account</h3>
             <form onSubmit={submitForm}>
                 <label htmlFor='fname'>First Name</label>
                 <input
@@ -59,14 +62,14 @@ const RegisterForm = props => {
                     onChange={handleChanges}
                     value={user.lname}
                 />
-                <label htmlFor='phone'>Phone Number</label>
+                <label htmlFor='email'>Email Address</label>
                 <input
-                    id='phone'
-                    type='tel'
-                    name='phone'
-                    // pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}'
+                    required
+                    id='email'
+                    type='email'
+                    name='email'
                     onChange={handleChanges}
-                    value={user.phone}
+                    value={user.email}
                 />
                 <label htmlFor='city'>City</label>
                 <input
@@ -90,7 +93,7 @@ const RegisterForm = props => {
                 <input
                     required
                     id='zipcode'
-                    type='number'
+                    type='text'
                     name='city'
                     onChange={handleChanges}
                     value={user.city}
@@ -104,18 +107,20 @@ const RegisterForm = props => {
                     onChange={handleChanges}
                     value={user.password}
                 />
-                <label className='check-container' htmlFor='terms'>I have read the Terms and Conditions
-                <input 
-                 id='terms'
-                 type='checkbox'
-                 name='terms'
-                 checked={user.terms}
+                <label className='checkContainer' htmlFor='terms'>I have read the Terms and Conditions
+                <input
+                    required
+                    id='terms'
+                    type='checkbox'
+                    name='terms'
+                    checked={user.terms}
                 />
                 <span className='checkmark' />
                 </label>
                 <button className='createBtn' type='submit'>Create an account</button>
         </form>
 
+        <p>Have an account? <a href='/sign-in'>Sign In</a></p>
         </div>
     );
 }

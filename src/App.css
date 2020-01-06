@@ -16,10 +16,9 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.register-form {
+.registerForm, .signinForm {
   position: absolute;
   width: 725px;
-  height: 940px;
   left: 715px;
   padding-left: 136px;
   background: #F1F3F6;
@@ -30,8 +29,8 @@ h1, h2, h3, h4, h5, h6 {
 input {
   display: block;
   width: 432px;
-  height: 54px;
-  margin: 2%;
+  height: 48px;
+  margin: 2% 0;
 }
 
 .createAcct {
@@ -42,7 +41,7 @@ input {
   margin-top: 98px;
 }
 
-.check-container {
+.checkContainer {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -50,7 +49,7 @@ input {
   cursor: pointer;
 }
 
-.check-container input {
+.checkContainer input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -68,7 +67,7 @@ input {
   border: 1px solid black;
 }
 
-.check-container input:checked ~.checkmark {
+.checkContainer input:checked ~.checkmark {
   background-color: #7FAECC;
 }
 
@@ -79,15 +78,15 @@ input {
 }
 
 
-.check-container input:checked ~.checkmark:after {
+.checkContainer input:checked ~.checkmark:after {
   display: block;
 }
 
-.check-container .checkmark:after {
+.checkContainer .checkmark:after {
   left: 4px;
-  bottom: 2px;
+  bottom: 4px;
   width: 8px;
-  height: 15px;
+  height: 13px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
@@ -95,11 +94,23 @@ input {
   transform: rotate(45deg);
 }
 
-.createBtn {
+.createBtn, .signinBtn {
   width: 366px;
   height: 48px;
+  margin-top: 60px;
   background: #7FAECC;
   border-radius: 8px;
+  font-weight: bold;
+}
+
+.registerForm, .signinForm a {
+  text-decoration: none;
+  color: #F46032;
+  font-weight: bold;
+}
+
+.signinForm {
+  height: 940px;
 }
 
 
