@@ -43,6 +43,8 @@ const RegisterForm = props => {
         setUser([...user, newUser]);
     };
 
+    
+
 
     return (
         <div className='registerContainer'>
@@ -52,6 +54,10 @@ const RegisterForm = props => {
             <div className='registerForm'>
                 <h3 className='formHeading'>Create new account</h3>
                 <form onSubmit={submitForm}>
+                    <div className='buttonDiv'>
+                    <button>Farmer</button>
+                    <button>Consumer</button>
+                    </div>
                     <label htmlFor='fname'>First Name</label>
                     <input
                         id='fname'
@@ -67,6 +73,14 @@ const RegisterForm = props => {
                         name='lname'
                         onChange={handleChanges}
                         value={user.lname}
+                    />
+                    <label htmlFor='farm'>Farm Name</label>
+                    <input
+                        id='farm'
+                        type='text'
+                        name='farm'
+                        onChange={handleChanges}
+                        value={user.farm}
                     />
                     <label htmlFor='email'>Email Address</label>
                     <input

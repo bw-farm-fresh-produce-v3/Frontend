@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Register Form styles */
 
 .registerForm {
-  height: 1150px;
+  height: 1300px;
 }
 
 input {
@@ -118,6 +118,24 @@ input {
   font-weight: bold;
 }
 
+.buttonDiv {
+  margin-left: 100px;
+}
+
+.buttonDiv button {
+  width: 100px;
+  height: 60px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  background: #7FAECC;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+
 /* Sign In Form Styles */
 
 .signinForm {
@@ -125,7 +143,7 @@ input {
 }
 
 .imageContainer img {
-  height: 1150px;
+  height: 1300px;
   width: 50%;
 }
 
