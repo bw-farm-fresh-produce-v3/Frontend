@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-
+import bgImage from './farm.jpg';
 
 const RegisterForm = props => {
 
@@ -43,6 +43,10 @@ const RegisterForm = props => {
 
 
     return (
+        <div className='registerContainer'>
+            <div>
+                <img src={bgImage}/>
+            </div>
         <div className='registerForm'>
             <h3 className='formHeading'>Create new account</h3>
             <form onSubmit={submitForm}>
@@ -118,9 +122,10 @@ const RegisterForm = props => {
                 <span className='checkmark' />
                 </label>
                 <button className='createBtn' type='submit'>Create an account</button>
-        </form>
+            </form>
 
         <p>Have an account? <a href='/sign-in'>Sign In</a></p>
+        </div>
         </div>
     );
 }
