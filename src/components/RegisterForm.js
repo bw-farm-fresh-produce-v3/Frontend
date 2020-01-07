@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import * as Yup from 'yup';
 import bgImage from './farm.jpg';
 
 
@@ -101,7 +102,7 @@ const RegisterForm = props => {
                         type='text'
                         name='city'
                         onChange={handleChanges}
-                        value={user.city}
+                        value={user.zipcode}
                     />
                     <label htmlFor='password'>Password</label>
                     <input
