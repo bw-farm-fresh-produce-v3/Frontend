@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import bgImage from './farm.jpg';
 
+
 const RegisterForm = props => {
 
     const initialState = {
