@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import bgImage from './farm.jpg';
 
 const SignInForm = props => {
     const initialState = {
@@ -20,7 +21,11 @@ const SignInForm = props => {
     };
 
     return (
-        <div className='signinForm'>
+        <div className='signinContainer'>
+            <div className='imageContainer signinImg'>
+                <img src={bgImage}/>
+            </div>
+            <div className='signinForm'>
             <h3 className='formHeading'>Sign in to account</h3>
             <form>
             <label htmlFor='email'>Email Address</label>
@@ -44,6 +49,7 @@ const SignInForm = props => {
             <button className='signinBtn' type='submit'>Sign In</button>
             </form>
             <p>Don't have an account? <a href='/register-form'>Create One</a></p>
+            </div>
         </div>
     )
 

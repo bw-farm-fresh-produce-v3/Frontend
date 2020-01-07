@@ -16,6 +16,14 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
+.registerContainer, .signinContainer {
+  display: flex;
+}
+
+.registerForm {
+  height: 1150px;
+}
+
 .registerForm, .signinForm {
   position: absolute;
   width: 725px;
@@ -97,6 +105,7 @@ input {
   width: 366px;
   height: 48px;
   margin-top: 60px;
+  margin-left: 40px;
   background: #7FAECC;
   border-radius: 8px;
   font-weight: bold;
@@ -109,5 +118,14 @@ input {
 }
 
 .signinForm {
+  height: 940px;
+}
+
+.imageContainer img {
+  height: 1150px;
+  width: 50%;
+}
+
+.signinImg img {
   height: 940px;
 }
