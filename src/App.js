@@ -8,7 +8,6 @@ import SignInForm from './components/SignInForm';
 // style imports
 import './App.css';
 
-
 function App() {
   return (
     <div className="App">
