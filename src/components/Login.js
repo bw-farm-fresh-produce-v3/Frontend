@@ -18,6 +18,14 @@ const Login = props => {
         e.preventDefault();
         props.loginUser(user);
         setUser(initialState);
+
+        axios
+        .get("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
+            headers:{  "Access-Control-Allow-Origin": "*" }
+        })
+        .then(res => console.log(res))
+        localStorage.setItem('token', res.data.payload)
+        .catch(err => console.error(err));
     };
 
     return (
