@@ -20,11 +20,24 @@ const FarmList = props => {
     return (
         <section className='farmList'>
             <div className='headerImg'>
-                <p>Farms near</p>
+                <h1>Farms near </h1>
+                <p>Choose any farms that fit your busy lifestyle.
+                    For your convenience, our farms offer features that makes
+                    eating healthy much easier.</p>
             </div>
-            <div className='farms'>
-                {farms.map(farm => <FarmCard farm={farm}/>)}
-            </div>
+            <section className='farmsMain'>
+                <div className='filterBy'>
+                    <p>Filter by</p>
+                    <h4>Seasonal Fruits and Vegetables</h4>
+                    <h4>All Year Fruits and Vegetables</h4>
+                    <h4>Services Offered</h4>
+                    <h4>Subscriptions</h4>
+                    <h4>Favorite Farms</h4>
+                </div>
+                <div className='farms'>
+                    {farms.map(farm => <FarmCard farm={farm}/>)}
+                </div>
+            </section>
         </section>
         
     )
