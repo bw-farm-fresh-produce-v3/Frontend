@@ -4,10 +4,15 @@ html, body {
   margin: 0 auto;
   box-sizing: border-box;
   font-family: 'Maven Pro', sans-serif;
+  background-color: #E5E5E5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Fira Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 .App {
@@ -21,9 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .registerForm, .signinForm {
-  position: absolute;
-  width: 725px;
-  left: 715px;
+  width: 50%;
   padding-left: 136px;
   background: #F1F3F6;
   backdrop-filter: blur(10px);
@@ -35,9 +38,18 @@ h1, h2, h3, h4, h5, h6 {
   height: 1300px;
 }
 
+.imageContainer {
+  width: 50%;
+}
+
+.imageContainer img {
+  height: 1300px;
+  width:100%;
+}
+
 input {
   display: block;
-  width: 432px;
+  width: 60%;
   height: 48px;
   margin: 2% 0;
 }
@@ -103,10 +115,10 @@ input {
 }
 
 .createBtn, .signinBtn {
-  width: 366px;
+  width: 50%;
   height: 48px;
-  margin-top: 60px;
-  margin-left: 40px;
+  margin-top: 6%;
+  margin-left: 5%;
   background: #7FAECC;
   border-radius: 8px;
   font-weight: bold;
@@ -142,17 +154,12 @@ input {
   height: 940px;
 }
 
-.imageContainer img {
-  height: 1300px;
-  width: 50%;
-}
-
 .signinImg img {
   height: 940px;
 }
 
 /* NavBar Styles */
-nav{
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -171,7 +178,7 @@ i {
 }
 
 .sellBtn {
-  width: 215px;
+  width: 13%;
   height: 48px;
   background: #7FAECC;
   border: none;
@@ -179,3 +186,151 @@ i {
   color: white;
   font-weight: bold;
 }
+/* Farm Card styles */
+.farmCard {
+  display: flex;
+  flex-direction: column;
+  width: 43%;
+  margin: 2%;
+  background: #F8F9FA;
+  border-radius: 10px;
+}
+
+.farmCardHeader {
+  display: flex;
+  align-items: center;
+  margin: 0 3%;
+}
+
+.farmCardHeader h4 {
+  padding-right: 10%;
+}
+
+.farmCard img {
+  width: 100%;
+  height: 196px;
+}
+
+.farmCardDesc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1% 3% 2%;
+}
+
+.farmCardDesc button {
+  width: 120px;
+  height: 32px;
+  background: #7FAECC;
+  border: none;
+  border-radius: 4px;
+  font-size: 12.8px;
+  font-weight: bold;
+}
+
+.favorite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heart {
+  border: none;
+  margin-right: 3%;
+}
+
+.farmCard h5 {
+  margin: 2% 3%;
+}
+
+.fa-heart {
+  color: black;
+}
+
+
+/* Farm List styles */
+.farmList {
+  width: 100%;
+}
+
+.headerImg {
+  background-image: url('./components/farm.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 96%;
+  height: 196px;
+  padding: 1% 2%;
+  color: rgb(238, 237, 237);
+}
+
+
+.headerImg p {
+  width: 40%;
+}
+
+.farmsMain {
+  display: flex;
+}
+
+.filterBy {
+  width: 411px;
+  margin-left: 20px;
+}
+
+.farms {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1% 1%;
+}
+
+/* Footer styles */
+footer {
+  background-color: white;
+  line-height: 2;
+}
+
+footer a {
+  color: rgba(43, 41, 45, 0.6);
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-around;
+  width: 60%;
+  margin-bottom: 5%;
+}
+
+.footerTop div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(43, 41, 45, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerBottom a {
+  margin: 0 5%;
+}
+
+.footerBtmLeft, .footerBtmRight {
+  width: 49%;
+  margin: 1% 0;
+}
+
+.footerBtmLeft {
+  margin-left: 3.5%;
+}
+
+.footerBtmRight {
+  margin-left: 65%;
+}
+
+.footerBtmRight i {
+  color: rgba(43, 41, 45, 0.6);
+}
+
+

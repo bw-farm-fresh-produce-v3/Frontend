@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import * as Yup from 'yup';
-import bgImage from './farm.jpg';
+import bgImage from './farm.png';
 import axios from 'axios';
 
 const CreateAcc = props => {
@@ -26,7 +26,6 @@ const CreateAcc = props => {
 
     const submitForm = e => {
         e.preventDefault();
-
         console.log('denise was here')
         // delete user.terms
         // setSubmittedForm()
@@ -49,10 +48,10 @@ const CreateAcc = props => {
             <div className='registerForm'>
                 <h3 className='formHeading'>Create new account</h3>
                 <form onSubmit={submitForm}>
-                    <div className='buttonDiv'>
+                    {/* <div className='buttonDiv'>
                     <button>Farmer</button>
                     <button>Consumer</button>
-                    </div>
+                    </div> */}
                     <label htmlFor='first_name'>First Name</label>
                     <input
                         id='first_name'
@@ -123,12 +122,17 @@ const CreateAcc = props => {
                         value={user.password}
                     />
                     <label className='checkContainer' htmlFor='terms'>I have read the Terms and Conditions
-
+                    {/* <input
+                        // required
+                        id='terms'
+                        type='checkbox'
+                        name='terms'
+                        checked={user.terms}
+                    /> */}
                     <span className='checkmark' />
                     </label>
                     <button className='createBtn' type='submit'>Create an account</button>
                 </form>
-
                 <p>Have an account? <a href='/login'>Sign In</a></p>
             </div>
         </div>
