@@ -26,9 +26,7 @@ a {
 }
 
 .registerForm, .signinForm {
-  position: absolute;
-  width: 725px;
-  left: 715px;
+  width: 50%;
   padding-left: 136px;
   background: #F1F3F6;
   backdrop-filter: blur(10px);
@@ -40,9 +38,18 @@ a {
   height: 1300px;
 }
 
+.imageContainer {
+  width: 50%;
+}
+
+.imageContainer img {
+  height: 1300px;
+  width:100%;
+}
+
 input {
   display: block;
-  width: 432px;
+  width: 60%;
   height: 48px;
   margin: 2% 0;
 }
@@ -147,17 +154,12 @@ input {
   height: 940px;
 }
 
-.imageContainer img {
-  height: 1300px;
-  width: 100%;
-}
-
 .signinImg img {
   height: 940px;
 }
 
 /* NavBar Styles */
-nav{
+nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -188,7 +190,7 @@ i {
 .farmCard {
   display: flex;
   flex-direction: column;
-  width: 496px;
+  width: 43%;
   margin: 2%;
   background: #F8F9FA;
   border-radius: 10px;
@@ -209,7 +211,7 @@ i {
 }
 
 .farmCard img {
-  width: 496px;
+  width: 100%;
   height: 196px;
 }
 
@@ -240,11 +242,12 @@ i {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  width: 96%;
   height: 196px;
   padding: 1% 2%;
   color: white;
 }
+
 
 .headerImg p {
   width: 40%;
@@ -278,7 +281,8 @@ footer a {
 .footerTop {
   display: flex;
   justify-content: space-around;
-  width: 75%;
+  width: 60%;
+  margin-bottom: 5%;
 }
 
 .footerTop div {
@@ -290,6 +294,23 @@ footer a {
   border-top: 1px solid rgba(43, 41, 45, 0.2);
   display: flex;
   justify-content: space-between;
+}
+
+.footerBottom a {
+  margin: 0 5%;
+}
+
+.footerBtmLeft, .footerBtmRight {
+  width: 49%;
+  margin: 1% 0;
+}
+
+.footerBtmLeft {
+  margin-left: 3.5%;
+}
+
+.footerBtmRight {
+  margin-left: 65%;
 }
 
 .footerBtmRight i {
