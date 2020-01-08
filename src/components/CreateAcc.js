@@ -1,50 +1,45 @@
 import React, {useState, useEffect} from 'react';
 import * as Yup from 'yup';
 import bgImage from './farm.jpg';
+import axios from 'axios';
 
 
 const CreateAcc = props => {
-
+    const [submittedForm, setSubmittedForm] = useState()
+       
     const initialState = {
-        fname: '',
-        lname: '',
+        first_name: '',
+        last_name: '',
         email: '',
         city: '',
         state: '',
-        zipcode: '',
-        password: '',
-        terms: false
+        zip: '',
+        password: "",
+        // terms: false
     };
 
-    const [user, setUser] = useState({initialState});
-
+    const [user, setUser] = useState(initialState);
+    console.log("state before submitting request", user)
     const handleChanges = e => {
         setUser({...user, [e.target.name]: e.target.value});
-        console.log(e.target.value);
+        // console.log(user);
     };
 
     const submitForm = e => {
         e.preventDefault();
-        props.registerUser(user);
-        setUser(initialState);
+        console.log('denise was here')
+        // delete user.terms
+        // setSubmittedForm()
+        // setSubmittedForm()
+        // setUser(initialState);
+
+        axios
+        .post("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
+            headers:{  "Access-Control-Allow-Origin": "*" }
+        })
+        .then(res => console.log(res))
+        .catch(err => console.error(err));
     };
-
-    const registerUser = user => {
-        const newUser = {
-            fname: user.fname,
-            lname: user.lname,
-            email: user.email,
-            city: user.city,
-            state: user.state,
-            zipcode: user.zipcode,
-            password: user.password,
-            terms: user.terms
-        };
-        setUser([...user, newUser]);
-    };
-
-    
-
 
     return (
         <div className='registerContainer'>
@@ -58,30 +53,30 @@ const CreateAcc = props => {
                     <button>Farmer</button>
                     <button>Consumer</button>
                     </div>
-                    <label htmlFor='fname'>First Name</label>
+                    <label htmlFor='first_name'>First Name</label>
                     <input
-                        id='fname'
+                        id='first_name'
                         type='text'
-                        name='fname'
+                        name='first_name'
                         onChange={handleChanges}
-                        value={user.fname}
+                        value={user.first_name}
                     />
-                    <label htmlFor='lname'>Last Name</label>
+                    <label htmlFor='last_name'>Last Name</label>
                     <input
-                        id='lname'
+                        id='last_name'
                         type='text'
-                        name='lname'
+                        name='last_name'
                         onChange={handleChanges}
-                        value={user.lname}
+                        value={user.last_name}
                     />
-                    <label htmlFor='farm'>Farm Name</label>
+                    {/* <label htmlFor='farm'>Farm Name</label>
                     <input
                         id='farm'
                         type='text'
                         name='farm'
                         onChange={handleChanges}
                         value={user.farm}
-                    />
+                    /> */}
                     <label htmlFor='email'>Email Address</label>
                     <input
                         required
@@ -109,14 +104,14 @@ const CreateAcc = props => {
                         onChange={handleChanges}
                         value={user.state}
                     />
-                    <label htmlFor='zipcode'>Zipcode</label>
+                    <label htmlFor='zip'>Zipcode</label>
                     <input
                         required
-                        id='zipcode'
+                        id='zip'
                         type='text'
-                        name='city'
+                        name='zip'
                         onChange={handleChanges}
-                        value={user.zipcode}
+                        value={user.zip}
                     />
                     <label htmlFor='password'>Password</label>
                     <input
@@ -128,13 +123,13 @@ const CreateAcc = props => {
                         value={user.password}
                     />
                     <label className='checkContainer' htmlFor='terms'>I have read the Terms and Conditions
-                    <input
-                        required
+                    {/* <input
+                        // required
                         id='terms'
                         type='checkbox'
                         name='terms'
                         checked={user.terms}
-                    />
+                    /> */}
                     <span className='checkmark' />
                     </label>
                     <button className='createBtn' type='submit'>Create an account</button>

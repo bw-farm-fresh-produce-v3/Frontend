@@ -48,7 +48,7 @@ const Login = props => {
                 />
             <button className='signinBtn' type='submit'>Sign In</button>
             </form>
-            <p>Don't have an account? <a href='/register-form'>Create One</a></p>
+            <p>Don't have an account? <a href='/register'>Create One</a></p>
             </div>
         </div>
     )
