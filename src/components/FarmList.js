@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import FarmCard from './FarmCard'
+import axios from 'axios';
+import FarmCard from './FarmCard';
+import bgImage from './farm.png';
 
 const FarmList = props => {
     const [farms, setFarms] = useState([])
@@ -17,9 +18,14 @@ const FarmList = props => {
         })
     }, [])
     return (
-        <div>Farm List
-            {farms.map(farm => <FarmCard farm={farm}/>)}
-        </div>
+        <section className='farmList'>
+            <div className='headerImg'>
+                <p>Farms near</p>
+            </div>
+            <div className='farms'>
+                {farms.map(farm => <FarmCard farm={farm}/>)}
+            </div>
+        </section>
         
     )
 }

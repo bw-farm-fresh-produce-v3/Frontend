@@ -144,7 +144,7 @@ input {
 
 .imageContainer img {
   height: 1300px;
-  width: 50%;
+  width: 100%;
 }
 
 .signinImg img {
@@ -178,4 +178,40 @@ i {
   border-radius: 8px;
   color: white;
   font-weight: bold;
+}
+/* Farm Card styles */
+.farmCard {
+  display: flex;
+  flex-direction: column;
+  width: 496px;
+}
+
+.farmCardHeader {
+  display: flex;
+  align-items: center;
+}
+
+.farmCardHeader p {
+  padding-left: 50px;
+}
+
+.farmCard img {
+  width: 496px;
+  height: 196px;
+}
+
+.farmCardDesc {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Farm List styles */
+.headerImg {
+  background-image: url('./components/farm.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1500px;
+  height: 196px;
 }

@@ -5,10 +5,9 @@ import {Route, Switch} from 'react-router-dom';
 import CreateAcc from './components/CreateAcc';
 import Login from './components/Login';
 import NavBar from './components/NavBar';
-//import FarmList from './components/FarmList'
+import FarmList from './components/FarmList'
 // style imports
 import './App.css';
-import FarmList from './components/FarmList';
 
 
 function App() {
