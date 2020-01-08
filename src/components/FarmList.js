@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import FarmCard from './FarmCard';
-import bgImage from './farm.png';
+import Footer from './Footer';
 
 const FarmList = props => {
     const [farms, setFarms] = useState([])
@@ -38,6 +38,7 @@ const FarmList = props => {
                     {farms.map(farm => <FarmCard farm={farm}/>)}
                 </div>
             </section>
+            <Footer />
         </section>
         
     )

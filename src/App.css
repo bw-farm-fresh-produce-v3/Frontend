@@ -11,6 +11,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Fira Sans', sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -260,3 +264,36 @@ i {
   flex-flow: row wrap;
   margin: 1% 1%;
 }
+
+/* Footer styles */
+footer {
+  background-color: white;
+  line-height: 2;
+}
+
+footer a {
+  color: rgba(43, 41, 45, 0.6);
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.footerTop div {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(43, 41, 45, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerBtmRight i {
+  color: rgba(43, 41, 45, 0.6);
+}
+
+
