@@ -5,22 +5,24 @@ import {Route, Switch} from 'react-router-dom';
 import CreateAcc from './components/CreateAcc';
 import Login from './components/Login';
 import NavBar from './components/NavBar';
+//import FarmList from './components/FarmList'
 // style imports
 import './App.css';
 import FarmList from './components/FarmList';
+
 
 function App() {
   return (
     <div className="App">
       <NavBar />
       <Switch>
-        <Route exact path='/create-acc'>
+        <Route exact path='/register'>
           <CreateAcc />
         </Route>
         <Route exact path='/login'>
           <Login />
         </Route>
-        <Route exact path='/farms'>
+        <Route path="/farms">
           <FarmList />
         </Route>
       </Switch>
