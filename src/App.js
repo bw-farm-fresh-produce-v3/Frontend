@@ -10,7 +10,6 @@ import ProduceList from './components/ProduceList';
 
 // style imports
 import './App.css';
-import FarmList from './components/FarmList';
 
 
 function App() {

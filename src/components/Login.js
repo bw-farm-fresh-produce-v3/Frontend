@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import bgImage from './farm.jpg';
+import bgImage from './farm.png';
 
 const Login = props => {
     const initialState = {
