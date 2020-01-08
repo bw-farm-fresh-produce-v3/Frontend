@@ -133,7 +133,6 @@ const CreateAcc = props => {
                     </label>
                     <button className='createBtn' type='submit'>Create an account</button>
                 </form>
-
                 <p>Have an account? <a href='/login'>Sign In</a></p>
             </div>
         </div>

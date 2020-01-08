@@ -9,7 +9,7 @@ const NavBar = props => {
             <a href=''>Search</a>
             <a href=''><i className="fas fa-shopping-cart"></i></a>
             <a href='/login'>Sign In</a>
-            <button className='sellBtn'><a href=''>Click Here to Sell</a></button>
+            <button className='sellBtn'><a href='/register'>Click Here to Sell</a></button>
         </nav>
     )
 }

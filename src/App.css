@@ -115,10 +115,10 @@ input {
 }
 
 .createBtn, .signinBtn {
-  width: 366px;
+  width: 50%;
   height: 48px;
-  margin-top: 60px;
-  margin-left: 40px;
+  margin-top: 6%;
+  margin-left: 5%;
   background: #7FAECC;
   border-radius: 8px;
   font-weight: bold;
@@ -178,7 +178,7 @@ i {
 }
 
 .sellBtn {
-  width: 215px;
+  width: 13%;
   height: 48px;
   background: #7FAECC;
   border: none;
@@ -207,7 +207,7 @@ i {
 }
 
 .farmCardHeader p {
-  padding-left: 50px;
+  padding-left: 10%;
 }
 
 .farmCard img {
@@ -245,7 +245,7 @@ i {
   width: 96%;
   height: 196px;
   padding: 1% 2%;
-  color: white;
+  color: rgb(238, 237, 237);
 }
 
 
