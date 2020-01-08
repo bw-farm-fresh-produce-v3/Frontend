@@ -8,7 +8,10 @@ export default function FarmCard(props) {
                 <p>{props.farm.city}, {props.farm.state}</p>
             </div>
             <img src={props.farm.image_url}/>
-            <h5>{props.farm.street}</h5>
+            <div className='favorite'>
+                <h5>{props.farm.street}</h5>
+                <button className='heart'><i className="far fa-heart"></i></button>
+            </div>
             <div className='farmCardDesc'>
                 <p>{props.farm.description}</p>
                 <button type='submit'>View Farm</button>
