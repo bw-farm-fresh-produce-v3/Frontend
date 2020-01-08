@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 import bgImage from './farm.jpg';
 import axios from 'axios';
 
-
 const CreateAcc = props => {
     const [submittedForm, setSubmittedForm] = useState()
        
@@ -27,6 +26,7 @@ const CreateAcc = props => {
 
     const submitForm = e => {
         e.preventDefault();
+
         console.log('denise was here')
         // delete user.terms
         // setSubmittedForm()
@@ -123,13 +123,7 @@ const CreateAcc = props => {
                         value={user.password}
                     />
                     <label className='checkContainer' htmlFor='terms'>I have read the Terms and Conditions
-                    {/* <input
-                        // required
-                        id='terms'
-                        type='checkbox'
-                        name='terms'
-                        checked={user.terms}
-                    /> */}
+
                     <span className='checkmark' />
                     </label>
                     <button className='createBtn' type='submit'>Create an account</button>

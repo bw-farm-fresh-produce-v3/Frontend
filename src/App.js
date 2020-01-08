@@ -8,6 +8,7 @@ import NavBar from './components/NavBar';
 //import FarmList from './components/FarmList'
 // style imports
 import './App.css';
+import FarmList from './components/FarmList';
 
 
 function App() {
