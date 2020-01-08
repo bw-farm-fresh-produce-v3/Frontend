@@ -3,60 +3,43 @@ import * as Yup from 'yup';
 import bgImage from './farm.jpg';
 import axios from 'axios';
 
-const RegisterForm = props => {
-    const [submittedForm, setSubmittedForm] = useState(false)
-    
-    useEffect(() => {
-        axios
-        .post("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
-            "Access-Control-Allow-Origin": true
-        })
-        .then(res => console.log(res))
-        .catch(err => console.error(err));
-    },[submittedForm])
-
+const CreateAcc = props => {
+    const [submittedForm, setSubmittedForm] = useState()
+       
     const initialState = {
-        fname: '',
-        lname: '',
+        first_name: '',
+        last_name: '',
         email: '',
         city: '',
         state: '',
-        zipcode: '',
-        password: '',
+        zip: '',
+        password: "",
         // terms: false
     };
 
-    const [user, setUser] = useState({initialState});
-
+    const [user, setUser] = useState(initialState);
+    console.log("state before submitting request", user)
     const handleChanges = e => {
         setUser({...user, [e.target.name]: e.target.value});
-        console.log(e.target.value);
+        // console.log(user);
     };
 
     const submitForm = e => {
         e.preventDefault();
-        delete user.terms
-        setUser(initialState);
-        setSubmittedForm(true)
-        setSubmittedForm(false)
+
+        console.log('denise was here')
+        // delete user.terms
+        // setSubmittedForm()
+        // setSubmittedForm()
+        // setUser(initialState);
+
+        axios
+        .post("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
+            headers:{  "Access-Control-Allow-Origin": "*" }
+        })
+        .then(res => console.log(res))
+        .catch(err => console.error(err));
     };
-
-    const registerUser = user => {
-        const newUser = {
-            first_name: user.first_name,
-            last_name: user.last_name,
-            email: user.email,
-            city: user.city,
-            state: user.state,
-            zip: user.zip,
-            password: user.password,
-            terms: user.terms
-        };
-        setUser([...user, newUser]);
-    };
-
-    
-
 
     return (
         <div className='registerContainer'>
@@ -140,13 +123,7 @@ const RegisterForm = props => {
                         value={user.password}
                     />
                     <label className='checkContainer' htmlFor='terms'>I have read the Terms and Conditions
-                    <input
-                        // required
-                        id='terms'
-                        type='checkbox'
-                        name='terms'
-                        checked={user.terms}
-                    />
+
                     <span className='checkmark' />
                     </label>
                     <button className='createBtn' type='submit'>Create an account</button>
@@ -158,4 +135,4 @@ const RegisterForm = props => {
     );
 }
 
-export default RegisterForm;
+export default CreateAcc;

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import FarmCard from './FarmCard'
@@ -20,7 +21,6 @@ const FarmList = props => {
         <div>Farm List
             {farms.map(farm => <FarmCard farm={farm}/>)}
         </div>
-        
     )
 }
 
