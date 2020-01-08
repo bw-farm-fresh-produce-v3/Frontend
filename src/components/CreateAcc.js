@@ -3,7 +3,6 @@ import * as Yup from 'yup';
 import bgImage from './farm.png';
 import axios from 'axios';
 
-
 const CreateAcc = props => {
     const [submittedForm, setSubmittedForm] = useState()
        
