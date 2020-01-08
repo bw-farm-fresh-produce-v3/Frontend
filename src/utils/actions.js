@@ -10,4 +10,7 @@ export const logins = (input) => dispatch => {
         .then(res => {
             dispatch({type: LOGIN_SUCCESS, payload: res.data})
         })
+        .catch(err => {
+            dispatch({type: LOGIN_FAIL, payload: err})
+        })
 }
