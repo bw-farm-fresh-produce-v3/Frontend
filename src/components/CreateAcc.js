@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import * as Yup from 'yup';
-import bgImage from './farm.jpg';
+import bgImage from './farm.png';
 import axios from 'axios';
 
 
@@ -15,7 +14,7 @@ const CreateAcc = props => {
         state: '',
         zip: '',
         password: "",
-        // terms: false
+        // farmer: false
     };
 
     const [user, setUser] = useState(initialState);
@@ -31,7 +30,7 @@ const CreateAcc = props => {
         // delete user.terms
         // setSubmittedForm()
         // setSubmittedForm()
-        // setUser(initialState);
+        setUser(initialState);
 
         axios
         .post("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
@@ -49,10 +48,10 @@ const CreateAcc = props => {
             <div className='registerForm'>
                 <h3 className='formHeading'>Create new account</h3>
                 <form onSubmit={submitForm}>
-                    <div className='buttonDiv'>
+                    {/* <div className='buttonDiv'>
                     <button>Farmer</button>
                     <button>Consumer</button>
-                    </div>
+                    </div> */}
                     <label htmlFor='first_name'>First Name</label>
                     <input
                         id='first_name'
@@ -122,16 +121,15 @@ const CreateAcc = props => {
                         onChange={handleChanges}
                         value={user.password}
                     />
-                    <label className='checkContainer' htmlFor='terms'>I have read the Terms and Conditions
-                    {/* <input
-                        // required
-                        id='terms'
+                    {/* <label className='checkContainer' htmlFor='farmer'>I am a farmer
+                    <input
+                        id='farmer'
                         type='checkbox'
-                        name='terms'
-                        checked={user.terms}
-                    /> */}
+                        name='farmer'
+                        checked={user.farmer}
+                    />
                     <span className='checkmark' />
-                    </label>
+                    </label> */}
                     <button className='createBtn' type='submit'>Create an account</button>
                 </form>
 
