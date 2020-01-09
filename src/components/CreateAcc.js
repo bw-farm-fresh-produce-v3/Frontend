@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import * as Yup from 'yup';
-import bgImage from './farm.jpg';
+import bgImage from './farm.png';
 import axios from 'axios';
 
 
