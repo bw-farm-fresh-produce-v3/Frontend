@@ -71,6 +71,15 @@ const CreateAcc = props => {
                         onChange={handleChanges}
                         value={user.username}
                     />
+                    <label htmlFor='password'>Password</label>
+                    <input
+                        required
+                        id='password'
+                        type='password'
+                        name='password'
+                        onChange={handleChanges}
+                        value={user.password}
+                    />
                     <label htmlFor='name'>Name</label>
                     <input
                         required
@@ -92,7 +101,7 @@ const CreateAcc = props => {
                     <input
                         id='addressState'
                         type='text'
-                        name='state'
+                        name='addressState'
                         onChange={handleChanges}
                         value={user.addressState}
                     />
@@ -106,15 +115,6 @@ const CreateAcc = props => {
                         maxLength='5'
                         onChange={handleChanges}
                         value={user.zipCode}
-                    />
-                    <label htmlFor='password'>Password</label>
-                    <input
-                        required
-                        id='password'
-                        type='password'
-                        name='password'
-                        onChange={handleChanges}
-                        value={user.password}
                     />
                     <label className='checkContainer' htmlFor='farmer'>I am a farmer
                     <input
