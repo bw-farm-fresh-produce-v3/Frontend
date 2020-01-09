@@ -30,7 +30,7 @@ const CreateAcc = props => {
         // delete user.terms
         // setSubmittedForm()
         // setSubmittedForm()
-        // setUser(initialState);
+        setUser(initialState);
 
         axios
         .post("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
