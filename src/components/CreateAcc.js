@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import bgImage from './farm.png';
 
 
-const CreateAcc = e => {
+const CreateAcc = props => {
        const initialState = {
         email: '',
         username: '',
