@@ -62,6 +62,7 @@ input {
   margin-top: 98px;
 }
 
+/* custom checkbox styles */
 .checkContainer {
   display: block;
   position: relative;
@@ -203,7 +204,7 @@ i {
 }
 
 .farmCardHeader h4 {
-  padding-right: 10%;
+  margin-right: 10%;
 }
 
 .farmCard img {

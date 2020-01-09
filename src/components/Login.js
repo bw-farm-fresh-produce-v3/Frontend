@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import bgImage from './farm.jpg';
+import bgImage from './farm.png';
+
 
 const Login = e => {
     const initialState = {
@@ -17,7 +18,7 @@ const Login = e => {
 
     const submitForm = e => {
         e.preventDefault();
-        props.loginUser(user);
+        // props.loginUser(user);
         setUser(initialState);
 
         axios
@@ -30,6 +31,7 @@ const Login = e => {
         .catch(err => console.error(err));
     }
 
+
     return (
         <div className='signinContainer'>
             <div className='imageContainer signinImg'>
@@ -38,14 +40,14 @@ const Login = e => {
             <div className='signinForm'>
             <h3 className='formHeading'>Sign in to account</h3>
             <form>
-            <label htmlFor='email'>Email Address</label>
+            <label htmlFor='username'>Username</label>
                 <input
                     required
-                    id='email'
-                    type='email'
-                    name='email'
+                    id='username'
+                    type='text'
+                    name='username'
                     onChange={handleChanges}
-                    value={user.email}
+                    value={user.username}
                 />
             <label htmlFor='password'>Password</label>
                 <input

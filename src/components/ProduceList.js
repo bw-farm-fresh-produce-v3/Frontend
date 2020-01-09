@@ -14,7 +14,7 @@ export function ProduceList(props) {
     .catch(err => console.log (err))
  }, [])
  console.log(products)
-    
+
     return(
         <div>
             <h1>Produce List</h1>
@@ -26,3 +26,4 @@ export function ProduceList(props) {
         </div>
     )
 }
+
