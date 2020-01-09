@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+
 import * as actions from '../utils/actions';
 import { connect } from 'react-redux';
 import bgImage from './farm.png';
-
 
 
 const CreateAcc = e => {
