@@ -6,7 +6,8 @@ import CreateAcc from './components/CreateAcc';
 import Login from './components/Login';
 import NavBar from './components/NavBar';
 import FarmList from './components/FarmList';
-import ProduceList from './components/ProduceList';
+import { ProduceList } from './components/ProduceList';
+import PrivateRoute from './components/PrivateRoute';
 
 // style imports
 import './App.css';
@@ -25,10 +26,8 @@ function App() {
         </Route>
         <Route path="/farms">
           <FarmList />
-        </Route>
-        <Route path="/produce">
-          <ProduceList />
-        </Route>
+          </Route>
+        <PrivateRoute exact path="/produce" component = {ProduceList} />
       </Switch>
     </div>
   );
