@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
-import bgImage from './farm.png';
+import bgImage from './farm.jpg';
 import axios from 'axios';
+
 
 const CreateAcc = props => {
     const [submittedForm, setSubmittedForm] = useState()
@@ -48,10 +49,10 @@ const CreateAcc = props => {
             <div className='registerForm'>
                 <h3 className='formHeading'>Create new account</h3>
                 <form onSubmit={submitForm}>
-                    {/* <div className='buttonDiv'>
+                    <div className='buttonDiv'>
                     <button>Farmer</button>
                     <button>Consumer</button>
-                    </div> */}
+                    </div>
                     <label htmlFor='first_name'>First Name</label>
                     <input
                         id='first_name'
@@ -133,6 +134,7 @@ const CreateAcc = props => {
                     </label>
                     <button className='createBtn' type='submit'>Create an account</button>
                 </form>
+
                 <p>Have an account? <a href='/login'>Sign In</a></p>
             </div>
         </div>
