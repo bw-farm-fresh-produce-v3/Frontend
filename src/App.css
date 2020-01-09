@@ -244,8 +244,12 @@ i {
   margin: 2% 3%;
 }
 
-.fa-heart {
+.far.fa-heart {
   color: black;
+}
+
+.fas.fa-heart {
+  color: red;
 }
 
 

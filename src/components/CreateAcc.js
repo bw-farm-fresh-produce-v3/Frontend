@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import bgImage from './farm.png';
 import axios from 'axios';
+import {useHistory} from 'react-router-dom';
 
 
 const CreateAcc = props => {
@@ -19,6 +20,9 @@ const CreateAcc = props => {
 
     const [user, setUser] = useState(initialState);
     console.log("state before submitting request", user)
+
+    let history = useHistory();
+
     const handleChanges = e => {
         setUser({...user, [e.target.name]: e.target.value});
         // console.log(user);
@@ -27,13 +31,14 @@ const CreateAcc = props => {
     const submitForm = e => {
         e.preventDefault();
         console.log('denise was here')
+        history.push('/Login')
         // delete user.terms
         // setSubmittedForm()
         // setSubmittedForm()
         setUser(initialState);
 
         axios
-        .post("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
+        .post("https://bestfarm.herokuapp.com/api/auth/register", user, {
             headers:{  "Access-Control-Allow-Origin": "*" }
         })
         .then(res => console.log(res))
