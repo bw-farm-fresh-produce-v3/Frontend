@@ -347,13 +347,13 @@ footer a {
 }
 
 .cartContainer h2 {
-  padding: 4% 5% 1%;
+  padding: 4% 7% 1%;
 }
 
 .cartBody {
   display: flex;
   justify-content: space-between;
-  padding: 0 5% 5%;
+  padding: 0 7% 5%;
 }
 
 .itemList {
@@ -371,23 +371,25 @@ footer a {
   background-color: #1F2A4C;
   border-radius: 5px 5px 0px 0px;
   margin: 0;
+  padding: 2% 3%;
 }
 
 .summary p {
   border-bottom: 1px solid #DDE2E5;
-  padding: 0 2% 2%;
+  padding: 0 3% 2%;
 }
 
 .cartBtns {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 6%;
 }
 
 .cartBtns button {
   width: 180px;
   height: 48px;
-  margin: 2% 0;
+  margin: 3% 0;
   color: black;
 }
 
