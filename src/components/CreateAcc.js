@@ -7,13 +7,13 @@ const CreateAcc = props => {
     const [submittedForm, setSubmittedForm] = useState()
        
     const initialState = {
-        first_name: '',
-        last_name: '',
         email: '',
-        city: '',
-        state: '',
-        zip: '',
-        password: "",
+        username: '',
+        password: '',
+        name: '',
+        addressCity: '',
+        addressState: '',
+        zipCode: '',
         // farmer: false
     };
 
@@ -52,30 +52,7 @@ const CreateAcc = props => {
                     <button>Farmer</button>
                     <button>Consumer</button>
                     </div> */}
-                    <label htmlFor='first_name'>First Name</label>
-                    <input
-                        id='first_name'
-                        type='text'
-                        name='first_name'
-                        onChange={handleChanges}
-                        value={user.first_name}
-                    />
-                    <label htmlFor='last_name'>Last Name</label>
-                    <input
-                        id='last_name'
-                        type='text'
-                        name='last_name'
-                        onChange={handleChanges}
-                        value={user.last_name}
-                    />
-                    {/* <label htmlFor='farm'>Farm Name</label>
-                    <input
-                        id='farm'
-                        type='text'
-                        name='farm'
-                        onChange={handleChanges}
-                        value={user.farm}
-                    /> */}
+                    
                     <label htmlFor='email'>Email Address</label>
                     <input
                         required
@@ -85,32 +62,50 @@ const CreateAcc = props => {
                         onChange={handleChanges}
                         value={user.email}
                     />
-                    <label htmlFor='city'>City</label>
+                    <label htmlFor='username'>Username</label>
                     <input
                         required
-                        id='city'
+                        id='username'
                         type='text'
-                        name='city'
+                        name='username'
                         onChange={handleChanges}
-                        value={user.city}
+                        value={user.username}
                     />
-                    <label htmlFor='state'>State</label>
+                    <label htmlFor='name'>Name</label>
                     <input
                         required
-                        id='state'
+                        id='name'
+                        type='text'
+                        name='name'
+                        onChange={handleChanges}
+                        value={user.name}
+                    />
+                    <label htmlFor='addressCity'>City</label>
+                    <input
+                        id='addressCity'
+                        type='text'
+                        name='addressCity'
+                        onChange={handleChanges}
+                        value={user.addressCity}
+                    />
+                    <label htmlFor='addressState'>State</label>
+                    <input
+                        id='addressState'
                         type='text'
                         name='state'
                         onChange={handleChanges}
-                        value={user.state}
+                        value={user.addressState}
                     />
-                    <label htmlFor='zip'>Zipcode</label>
+                    <label htmlFor='zipCode'>Zipcode</label>
                     <input
                         required
-                        id='zip'
-                        type='text'
-                        name='zip'
+                        id='zipCode'
+                        type='integer'
+                        name='zipCode'
+                        minLength='5'
+                        maxLength='5'
                         onChange={handleChanges}
-                        value={user.zip}
+                        value={user.zipCode}
                     />
                     <label htmlFor='password'>Password</label>
                     <input
@@ -121,7 +116,7 @@ const CreateAcc = props => {
                         onChange={handleChanges}
                         value={user.password}
                     />
-                    {/* <label className='checkContainer' htmlFor='farmer'>I am a farmer
+                    <label className='checkContainer' htmlFor='farmer'>I am a farmer
                     <input
                         id='farmer'
                         type='checkbox'
@@ -129,7 +124,7 @@ const CreateAcc = props => {
                         checked={user.farmer}
                     />
                     <span className='checkmark' />
-                    </label> */}
+                    </label>
                     <button className='createBtn' type='submit'>Create an account</button>
                 </form>
 
