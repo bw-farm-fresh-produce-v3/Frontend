@@ -17,17 +17,17 @@ const Login = props => {
 
     const submitForm = e => {
         e.preventDefault();
-        props.loginUser(user);
+        // props.loginUser(user);
         setUser(initialState);
 
-        axios
-        .get("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
-            headers:{  "Access-Control-Allow-Origin": "*" }
-        })
-        .then(res => {
-            dispatch({type: LOGIN_SUCCESS, payload: res.data})
-        sessionStorage.setItem('token', res.data.payload)
-        .catch(err => console.error(err));
+        // axios
+        // .get("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
+        //     headers:{  "Access-Control-Allow-Origin": "*" }
+        // })
+        // .then(res => {
+        //     dispatch({type: LOGIN_SUCCESS, payload: res.data})
+        // sessionStorage.setItem('token', res.data.payload)
+        // .catch(err => console.error(err));
     };
 
     return (
@@ -38,14 +38,14 @@ const Login = props => {
             <div className='signinForm'>
             <h3 className='formHeading'>Sign in to account</h3>
             <form>
-            <label htmlFor='email'>Email Address</label>
+            <label htmlFor='username'>Username</label>
                 <input
                     required
-                    id='email'
-                    type='email'
-                    name='email'
+                    id='username'
+                    type='text'
+                    name='username'
                     onChange={handleChanges}
-                    value={user.email}
+                    value={user.username}
                 />
             <label htmlFor='password'>Password</label>
                 <input
