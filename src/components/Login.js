@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
+import * as actions from '../utils/actions';
+import { connect } from 'react-redux';
 import bgImage from './farm.png';
 
 
@@ -17,25 +19,26 @@ const Login = e => {
     };
 
     const submitForm = e => {
+        return dispatch => {
+
         e.preventDefault();
-        // props.loginUser(user);
         setUser(initialState);
 
         axios
         .get("https://bestfarm.herokuapp.com/api/users/user", user, {
-            //headers:{  }
         })
         .then(res => {
-            dispatch({type: LOGIN_SUCCESS, payload: res.data})
+            dispatch({type: actions.LOGIN_SUCCESS, payload: res.data})
         sessionStorage.setItem('token', res.data.payload)
+        })
         .catch(err => console.error(err));
     }
-
+}
 
     return (
         <div className='signinContainer'>
             <div className='imageContainer signinImg'>
-                <img src={bgImage}/>
+                <img src={bgImage} alt='FarmBackground'/>
             </div>
             <div className='signinForm'>
             <h3 className='formHeading'>Sign in to account</h3>
@@ -58,7 +61,7 @@ const Login = e => {
                     onChange={handleChanges}
                     value={user.password}
                 />
-            <button className='signinBtn' type='submit'>Sign In</button>
+            <button onClick={submitForm} className='signinBtn' type='submit'>Sign In</button>
             </form>
             <p>Don't have an account? <a href='/register'>Create One</a></p>
             </div>
@@ -68,4 +71,4 @@ const Login = e => {
     
 }
 
-export default Login;
+export default connect()(Login);
