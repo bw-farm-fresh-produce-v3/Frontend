@@ -2,7 +2,8 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import bgImage from './farm.png';
 
-const Login = props => {
+
+const Login = e => {
     const initialState = {
         email: '',
         password: ''
@@ -20,15 +21,16 @@ const Login = props => {
         // props.loginUser(user);
         setUser(initialState);
 
-        // axios
-        // .get("https://bw-fresh-farm-produce-backend.herokuapp.com/api/auth/register", user, {
-        //     headers:{  "Access-Control-Allow-Origin": "*" }
-        // })
-        // .then(res => {
-        //     dispatch({type: LOGIN_SUCCESS, payload: res.data})
-        // sessionStorage.setItem('token', res.data.payload)
-        // .catch(err => console.error(err));
-    };
+        axios
+        .get("https://bestfarm.herokuapp.com/api/users/user", user, {
+            //headers:{  }
+        })
+        .then(res => {
+            dispatch({type: LOGIN_SUCCESS, payload: res.data})
+        sessionStorage.setItem('token', res.data.payload)
+        .catch(err => console.error(err));
+    }
+
 
     return (
         <div className='signinContainer'>
