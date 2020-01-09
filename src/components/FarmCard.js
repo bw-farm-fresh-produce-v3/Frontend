@@ -18,7 +18,7 @@ export default function FarmCard(props) {
                 <h4>{props.farm.title}</h4>
                 <p>{props.farm.city}, {props.farm.state}</p>
             </div>
-            <img src={props.farm.image_url}/>
+            <img src={props.farm.image_url} alt='farm picture'/>
             <div className='favorite'>
                 <h5>{props.farm.street}</h5>
                 {favorite ? (
