@@ -410,21 +410,28 @@ footer a {
     display: none;
   }
   .registerForm, .signinForm {
-    width: 100%;
+    width: 500px;
     padding-left: 0;
   }
+  form {
+    margin-left: 15%;
+  }
   input {
-    width: 100%;
+    width: 80%;
     height: 30px;
   }
   .formHeading {
     margin-top: 10%;
+    margin-left: 15%;
   }
   .registerForm {
     height: 800px;
   }
   .createBtn, .signinBtn {
-    margin-left: 24%;
+    margin-left: 15%;
+  }
+  .registerForm p, .signinForm p {
+    margin-left: 15%;
   }
   .signinForm {
     height: 600px;
