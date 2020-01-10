@@ -1,3 +1,8 @@
+## Farm Fresh Produce
+We bring fresh, organic, non-GMO and pesticide/herbicide-free produce grown by local farmers straight to you! Our app connects consumers to local farmers so that they can purchase fresh, locally-sourced fruits and vegetables.
+
+For more information about our app, please check out our product vision at https://docs.google.com/document/d/1BqmjzFnQuYt9LQwxby2iB58IzMdpOxHBqo3xYCY67Lo/edit?usp=sharing
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
