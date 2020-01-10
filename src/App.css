@@ -358,6 +358,8 @@ footer a {
 
 .itemList {
   width: 68%;
+  background-color: #F1F3F6;
+  border-radius: 5px;
 }
 
 .orderSummary {
@@ -394,8 +396,57 @@ footer a {
 }
 
 .continue {
-  background-color: #E5E5E5;
+  background-color: #F1F3F6;
   border: 1px solid #F46032;
+}
+
+.continue:hover {
+  background-color: #F46032;
+}
+
+/* Media queries */
+@media (max-width: 500px) {
+  .imageContainer {
+    display: none;
+  }
+  .registerForm, .signinForm {
+    width: 100%;
+    padding-left: 0;
+  }
+  input {
+    width: 100%;
+    height: 30px;
+  }
+  .formHeading {
+    margin-top: 10%;
+  }
+  .registerForm {
+    height: 800px;
+  }
+  .createBtn, .signinBtn {
+    margin-left: 24%;
+  }
+  .signinForm {
+    height: 600px;
+  }
+  .sellBtn {
+    display: none;
+  }
+  .farmCard {
+    width: 100%;
+    margin-right: 3%;
+  }
+  .farmsMain {
+    flex-direction: column;
+  }
+  .filterBy {
+    width: 90%;
+    text-align: center;
+  }
+  .filterBy h4, .filterBy p {
+    font-size: 14px;
+    margin: 2% 0;
+  }
 }
 
 

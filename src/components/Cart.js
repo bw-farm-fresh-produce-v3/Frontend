@@ -3,6 +3,10 @@ import Footer from './Footer';
 
 const ShoppingCart = props => {
 
+    const onClick = e => {
+        window.location.href='/produce';
+    }
+
     return (
         <section className='cartContainer'>
             <h2>Shopping Cart</h2>
@@ -20,7 +24,7 @@ const ShoppingCart = props => {
                     </div>
                     <div className='cartBtns'>
                         <button className='checkoutBtn'>Go to Checkout</button>
-                        <button className='continue'>Continue shopping</button>
+                        <button className='continue' onClick={onClick}>Continue shopping</button>
                     </div>
                 </div>
             </div>

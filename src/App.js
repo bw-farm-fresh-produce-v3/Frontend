@@ -31,6 +31,9 @@ function App() {
         <Route exact path='/cart'>
           <ShoppingCart />
         </Route>
+        <Route exact path='/'>
+          <CreateAcc />
+        </Route>
       </Switch>
     </div>
   );
