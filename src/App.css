@@ -435,10 +435,15 @@ footer a {
   .farmCard {
     width: 100%;
     margin-right: 3%;
+    margin-left: 3%;
+  }
+  .headerImg p {
+    width: 60%;
   }
   .farmsMain {
     flex-direction: column;
   }
+  
   .filterBy {
     width: 90%;
     text-align: center;
@@ -446,6 +451,19 @@ footer a {
   .filterBy h4, .filterBy p {
     font-size: 14px;
     margin: 2% 0;
+  }
+  footer {
+    line-height: 1.5;
+  }
+  .footerTop {
+    width: 100%;
+    font-size: 14px;
+  }
+  .footerBottom {
+    font-size: 14px;
+  }
+  .footerBtmRight {
+    margin-left: 53%;
   }
 }
 
