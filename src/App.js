@@ -8,7 +8,7 @@ import NavBar from './components/NavBar';
 import FarmList from './components/FarmList';
 import { ProduceList } from './components/ProduceList';
 import PrivateRoute from './components/PrivateRoute';
-
+import ShoppingCart from './components/Cart';
 // style imports
 import './App.css';
 
@@ -24,10 +24,16 @@ function App() {
         <Route exact path='/login'>
           <Login />
         </Route>
-        <Route path="/farms">
+        <Route exact path="/farms">
           <FarmList />
-          </Route>
+        </Route>
         <PrivateRoute exact path="/produce" component = {ProduceList} />
+        <Route exact path='/cart'>
+          <ShoppingCart />
+        </Route>
+        <Route exact path='/'>
+          <CreateAcc />
+        </Route>
       </Switch>
     </div>
   );

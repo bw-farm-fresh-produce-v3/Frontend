@@ -12,6 +12,10 @@ export default function FarmCard(props) {
         }
     }
 
+    const onClick = e => {
+        window.location.href='/produce';
+    }
+
     return (
         <div className='farmCard'>
             <div className='farmCardHeader'>
@@ -28,7 +32,7 @@ export default function FarmCard(props) {
             </div>
             <div className='farmCardDesc'>
                 <p>{props.farm.description}</p>
-                <button type='submit'>View Farm</button>
+                <button type='submit' onClick={onClick}>View Farm</button>
             </div>
         </div>    
         )

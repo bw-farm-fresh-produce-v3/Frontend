@@ -33,9 +33,9 @@ const Footer = props => {
                     <a href=''>License</a>
                 </div>
                 <div className='footerBtmRight'>
-                    <a href={'https://twitter.com/'} target={'_blank'}><i className="fab fa-twitter"></i></a>
-                    <a href={'https://www.facebook.com/'} target={'_blank'}><i className="fab fa-facebook-square"></i></a>
-                    <a href={'https://linkedin.com/'} target={'_blank'}><i className="fab fa-linkedin-in"></i></a>
+                    <a href={'https://twitter.com/'} target={'_blank'}><i className="fab fa-twitter" alt="twitter logo"></i></a>
+                    <a href={'https://www.facebook.com/'} target={'_blank'}><i className="fab fa-facebook-square" alt="facebook logo"></i></a>
+                    <a href={'https://linkedin.com/'} target={'_blank'}><i className="fab fa-linkedin-in" alt="linkedin logo"></i></a>
                 </div>
 
             </div>

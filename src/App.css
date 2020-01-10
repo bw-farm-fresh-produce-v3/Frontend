@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Maven+Pro&display=swap');
-
+/* General Styles */
 html, body {
   margin: 0 auto;
   box-sizing: border-box;
@@ -15,6 +15,19 @@ a {
   text-decoration: none;
 }
 
+button {
+  width: 100px;
+  height: 60px;
+  background: #7FAECC;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+
+/* Begin app styles */
 .App {
   display: flex;
   flex-direction: column;
@@ -120,9 +133,7 @@ input {
   height: 48px;
   margin-top: 6%;
   margin-left: 5%;
-  background: #7FAECC;
   border-radius: 8px;
-  font-weight: bold;
 }
 
 .registerForm a, .signinForm a {
@@ -140,12 +151,7 @@ input {
   height: 60px;
   margin-bottom: 30px;
   margin-right: 20px;
-  background: #7FAECC;
-  border: none;
-  border-radius: 8px;
   font-size: 14px;
-  font-weight: bold;
-  color: white;
 }
 
 
@@ -181,11 +187,6 @@ i {
 .sellBtn {
   width: 13%;
   height: 48px;
-  background: #7FAECC;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
 }
 /* Farm Card styles */
 .farmCard {
@@ -222,11 +223,9 @@ i {
 .farmCardDesc button {
   width: 120px;
   height: 32px;
-  background: #7FAECC;
-  border: none;
   border-radius: 4px;
   font-size: 12.8px;
-  font-weight: bold;
+  color: black;
 }
 
 .favorite {
@@ -237,7 +236,11 @@ i {
 
 .heart {
   border: none;
-  margin-right: 3%;
+  background-color: white;
+  height: 18px;
+  width: 18px;
+  margin-right: 5%;
+  padding: 0;
 }
 
 .farmCard h5 {
@@ -268,7 +271,6 @@ i {
   padding: 1% 2%;
   color: rgb(238, 237, 237);
 }
-
 
 .headerImg p {
   width: 40%;
@@ -337,5 +339,151 @@ footer a {
 .footerBtmRight i {
   color: rgba(43, 41, 45, 0.6);
 }
+
+/* Shopping Cart styles */
+.cartContainer {
+  width: 100%;
+  background-color: white;
+}
+
+.cartContainer h2 {
+  padding: 4% 7% 1%;
+}
+
+.cartBody {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7% 5%;
+}
+
+.itemList {
+  width: 68%;
+  background-color: #F1F3F6;
+  border-radius: 5px;
+}
+
+.orderSummary {
+  width: 30%;
+  background-color: #F1F3F6;
+  border-radius: 5px;
+}
+
+.orderSummary h3 {
+  color: white;
+  background-color: #1F2A4C;
+  border-radius: 5px 5px 0px 0px;
+  margin: 0;
+  padding: 2% 3%;
+}
+
+.summary p {
+  border-bottom: 1px solid #DDE2E5;
+  padding: 0 3% 2%;
+}
+
+.cartBtns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 6%;
+}
+
+.cartBtns button {
+  width: 180px;
+  height: 48px;
+  margin: 3% 0;
+  color: black;
+}
+
+.continue {
+  background-color: #F1F3F6;
+  border: 1px solid #F46032;
+}
+
+.continue:hover {
+  background-color: #F46032;
+}
+
+/* Media queries */
+@media (max-width: 500px) {
+  .imageContainer {
+    display: none;
+  }
+  .registerForm, .signinForm {
+    width: 500px;
+    padding-left: 0;
+  }
+  form {
+    margin-left: 15%;
+  }
+  input {
+    width: 80%;
+    height: 30px;
+  }
+  .formHeading {
+    margin-top: 10%;
+    margin-left: 15%;
+  }
+  .registerForm {
+    height: 800px;
+  }
+  .createBtn, .signinBtn {
+    margin-left: 15%;
+  }
+  .registerForm p, .signinForm p {
+    margin-left: 15%;
+  }
+  .signinForm {
+    height: 600px;
+  }
+  .sellBtn {
+    display: none;
+  }
+  .farmCard {
+    width: 100%;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+  .headerImg p {
+    width: 60%;
+  }
+  .farmsMain {
+    flex-direction: column;
+  }
+  
+  .filterBy {
+    width: 90%;
+    text-align: center;
+  }
+  .filterBy h4, .filterBy p {
+    font-size: 14px;
+    margin: 2% 0;
+  }
+  footer {
+    line-height: 1.5;
+  }
+  .footerTop {
+    width: 100%;
+    font-size: 14px;
+  }
+  .footerBottom {
+    font-size: 14px;
+  }
+  .footerBtmRight {
+    margin-left: 53%;
+  }
+  .cartBody {
+    flex-direction: column;
+    align-items: center;
+  }
+  .itemList {
+    width: 100%;
+  }
+  .orderSummary {
+    width: 100%;
+  }
+}
+
+
 
 
